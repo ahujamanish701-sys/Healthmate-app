@@ -8,56 +8,45 @@
 </head>
 <body>
 
-<div class="hero">
+<!-- START SCREEN -->
+<div id="startScreen" class="start-screen">
     <h1>💪 HealthMate Pro</h1>
-    <p>Track Your Fitness. Transform Your Life.</p>
+    <p>Your Personal Fitness Companion</p>
+    <button onclick="startApp()">Start Your Journey</button>
 </div>
 
-<div class="container">
+<!-- MAIN APP (Hidden Initially) -->
+<div id="mainApp" style="display: none;">
 
-    <!-- Steps -->
-    <div class="card">
-        <h3>👣 Daily Steps</h3>
-        <input type="number" id="steps" placeholder="Enter steps">
-        <button onclick="saveSteps()">Save</button>
-        <p id="stepsResult"></p>
+    <div class="hero">
+        <h2>Track Your Fitness. Transform Your Life.</h2>
     </div>
 
-    <!-- Water -->
-    <div class="card">
-        <h3>💧 Water Intake</h3>
-        <input type="number" id="water" placeholder="Glasses per day">
-        <button onclick="saveWater()">Save</button>
-        <p id="waterResult"></p>
-    </div>
+    <div class="container">
 
-    <!-- Medicine -->
-    <div class="card">
-        <h3>💊 Medicine Reminder</h3>
-        <input type="text" id="medicine" placeholder="Medicine name">
-        <button onclick="saveMedicine()">Set Reminder</button>
-        <p id="medicineResult"></p>
-    </div>
+        <div class="card">
+            <h3>📊 BMI Calculator</h3>
+            <input type="number" id="weight" placeholder="Weight (kg)">
+            <input type="number" id="height" placeholder="Height (cm)">
+            <button onclick="calculateBMI()">Calculate</button>
+            <p id="bmiResult"></p>
+        </div>
 
-    <!-- BMI -->
-    <div class="card">
-        <h3>📊 BMI Calculator</h3>
-        <input type="number" id="weight" placeholder="Weight (kg)">
-        <input type="number" id="height" placeholder="Height (cm)">
-        <button onclick="calculateBMI()">Calculate</button>
-        <p id="bmiResult"></p>
-    </div>
+        <div class="card">
+            <h3>👣 Daily Steps</h3>
+            <input type="number" id="steps" placeholder="Enter steps">
+            <button onclick="saveSteps()">Save</button>
+            <p id="stepsResult"></p>
+        </div>
 
-    <!-- Calories -->
-    <div class="card">
-        <h3>🔥 Calorie Calculator</h3>
-        <input type="number" id="age" placeholder="Age">
-        <input type="number" id="calWeight" placeholder="Weight (kg)">
-        <input type="number" id="calHeight" placeholder="Height (cm)">
-        <button onclick="calculateCalories()">Calculate</button>
-        <p id="calorieResult"></p>
-    </div>
+        <div class="card">
+            <h3>💧 Water Intake</h3>
+            <input type="number" id="water" placeholder="Glasses per day">
+            <button onclick="saveWater()">Save</button>
+            <p id="waterResult"></p>
+        </div>
 
+    </div>
 </div>
 
 <script src="script.js"></script>
