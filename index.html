@@ -1,51 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>HealthMate Pro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
 <!-- START SCREEN -->
-<div id="startScreen" class="start-screen">
+<div id="startScreen" class="center-screen">
     <h1>💪 HealthMate Pro</h1>
-    <p>Your Personal Fitness Companion</p>
-    <button onclick="startApp()">Start Your Journey</button>
+    <button onclick="showLogin()">Start</button>
 </div>
 
-<!-- MAIN APP (Hidden Initially) -->
-<div id="mainApp" style="display: none;">
+<!-- LOGIN SCREEN -->
+<div id="loginScreen" class="center-screen hidden">
+    <h2>Login</h2>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Your Email">
+    <button onclick="login()">Login</button>
+</div>
 
-    <div class="hero">
-        <h2>Track Your Fitness. Transform Your Life.</h2>
+<!-- PROFILE DASHBOARD -->
+<div id="profileScreen" class="hidden">
+    <h2 id="welcomeText"></h2>
+    <button onclick="showForm()">Enter Health Data</button>
+</div>
+
+<!-- HEALTH FORM -->
+<div id="formScreen" class="hidden container">
+    <div class="card">
+        <h3>Enter Your Health Data</h3>
+        <input type="number" id="steps" placeholder="Steps">
+        <input type="number" id="height" placeholder="Height (cm)">
+        <input type="number" id="weight" placeholder="Weight (kg)">
+        <input type="number" id="water" placeholder="Water Intake (glasses)">
+        <input type="number" id="calories" placeholder="Calories Burned">
+        <input type="number" id="workout" placeholder="Workout Duration (min)">
+        <input type="number" id="sleep" placeholder="Sleep Hours">
+        <button onclick="generateReport()">Generate Report</button>
+    </div>
+</div>
+
+<!-- REPORT SECTION -->
+<div id="reportScreen" class="hidden container">
+    <div class="card">
+        <h3>Health Flowchart</h3>
+        <canvas id="healthChart"></canvas>
     </div>
 
-    <div class="container">
+    <div class="card">
+        <h3>Health Report</h3>
+        <p id="writtenReport"></p>
+    </div>
 
-        <div class="card">
-            <h3>📊 BMI Calculator</h3>
-            <input type="number" id="weight" placeholder="Weight (kg)">
-            <input type="number" id="height" placeholder="Height (cm)">
-            <button onclick="calculateBMI()">Calculate</button>
-            <p id="bmiResult"></p>
-        </div>
-
-        <div class="card">
-            <h3>👣 Daily Steps</h3>
-            <input type="number" id="steps" placeholder="Enter steps">
-            <button onclick="saveSteps()">Save</button>
-            <p id="stepsResult"></p>
-        </div>
-
-        <div class="card">
-            <h3>💧 Water Intake</h3>
-            <input type="number" id="water" placeholder="Glasses per day">
-            <button onclick="saveWater()">Save</button>
-            <p id="waterResult"></p>
-        </div>
-
+    <div class="card">
+        <h3>Roadmap Recommendation</h3>
+        <p id="roadmap"></p>
     </div>
 </div>
 
