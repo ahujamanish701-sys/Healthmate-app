@@ -1,98 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HealthFit Pro</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <title>Guava Health - Smart Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Sidebar -->
-<div class="sidebar">
-  <h2>HealthFit</h2>
-  <ul>
-    <li onclick="showSlide('home')">🏠 Main Menu</li>
-    <li onclick="showSlide('profile')">👤 Profile</li>
-    <li onclick="showSlide('health')">💪 Health Data</li>
-    <li onclick="showSlide('roadmap')">🗺 Roadmap</li>
-    <li onclick="showSlide('settings')">⚙ Settings</li>
-  </ul>
-</div>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">G</div>
+            <div class="title-section">
+                <h1>Guava Health Tracker</h1>
+                <p>Manage meds, symptoms & medical records easily</p>
+                <div class="rating">⭐ 4.5 • 1K Reviews • Rated 3+</div>
+                <button class="install-btn" onclick="installApp()">Install</button>
+            </div>
+        </div>
 
-<!-- Content Area -->
-<div class="content">
-
-  <!-- HOME -->
-  <section id="home" class="slide active">
-    <h1>Welcome to HealthFit Pro</h1>
-    <p class="slogan">"Track Today, Transform Tomorrow"</p>
-    <p class="slogan">"Your Health, Your Power"</p>
-    <p class="slogan">"Small Steps, Big Results"</p>
-    <button onclick="showSlide('login')">Start</button>
-  </section>
-
-  <!-- LOGIN -->
-  <section id="login" class="slide">
-    <h2>Login with Google</h2>
-    <button class="google-btn">Sign in with Google</button>
-  </section>
-
-  <!-- PROFILE -->
-  <section id="profile" class="slide">
-    <h2>Create Profile</h2>
-    <input type="text" id="name" placeholder="Name">
-    <input type="number" id="age" placeholder="Age">
-    <input type="date" id="dob">
-    <input type="file" id="photo">
-    <button onclick="saveProfile()">Save Profile</button>
-    <div id="profileDisplay"></div>
-  </section>
-
-  <!-- HEALTH DATA -->
-  <section id="health" class="slide">
-    <h2>Health Tracker</h2>
-    <input type="number" id="steps" placeholder="Steps">
-    <input type="number" id="height" placeholder="Height (cm)">
-    <input type="number" id="weight" placeholder="Weight (kg)">
-    <input type="number" id="water" placeholder="Water Intake (L)">
-    <input type="number" id="calories" placeholder="Calories">
-    <input type="number" id="workout" placeholder="Workout Duration (min)">
-    <input type="text" id="sleep" placeholder="Sleep Schedule (e.g 7h)">
-    <button onclick="calculateBMI()">Calculate BMI</button>
-    <h3 id="bmiResult"></h3>
-
-    <!-- Flowchart -->
-    <div class="flowchart">
-      <div>Steps</div>
-      <div>↓</div>
-      <div>Workout</div>
-      <div>↓</div>
-      <div>Calories Burn</div>
-      <div>↓</div>
-      <div>Healthy Body</div>
-    </div>
-  </section>
-
-  <!-- ROADMAP -->
-  <section id="roadmap" class="slide">
-    <h2>Your Health Roadmap</h2>
-    <ul class="roadmap">
-      <li>Step 1: Set Profile</li>
-      <li>Step 2: Track Daily Steps</li>
-      <li>Step 3: Maintain Diet & Water</li>
-      <li>Step 4: Workout Regularly</li>
-      <li>Step 5: Sleep 7-8 Hours</li>
-    </ul>
-  </section>
-
-  <!-- SETTINGS -->
-  <section id="settings" class="slide">
-    <h2>Settings</h2>
-    <p>Dark Mode Toggle (Coming Soon)</p>
-  </section>
-
-</div>
-
-</body>
-</html>
+        <div class="features">
+            <div class="card">
+                <h3>Track Health</h3>
+                <p>Monitor blood pressure, sugar & more in one place.</p>
+            </div>
+            <div class="card">
+                <h3>All Records</h3>
+                <p>Store prescriptions and medical reports securely.</p>
+            </div>
+            <div class="card">
+                <h3>Daily Insights</h3>
+                <p>Get smart suggestions for better wellness.</p>
