@@ -1,92 +1,95 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  color: white;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-.sidebar {
-  width: 220px;
-  background: #111;
-  padding: 20px;
-  height: 100vh;
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.sidebar h2 {
-  text-align: center;
-  margin-bottom: 30px;
+.container{
+    width:90%;
+    max-width:1100px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
+.header{
+    display:flex;
+    gap:25px;
+    align-items:center;
 }
 
-.sidebar li {
-  padding: 10px;
-  cursor: pointer;
-  transition: 0.3s;
+.app-icon{
+    width:100px;
+    height:100px;
+    background:#1db954;
+    border-radius:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    font-weight:bold;
 }
 
-.sidebar li:hover {
-  background: #00c6ff;
+.title-section h1{
+    font-size:32px;
 }
 
-.content {
-  flex: 1;
-  padding: 40px;
+.title-section p{
+    opacity:0.8;
+    margin-top:5px;
 }
 
-.slide {
-  display: none;
-  animation: fadeIn 0.8s ease-in-out;
+.rating{
+    margin-top:10px;
+    color:#ffd700;
 }
 
-.active {
-  display: block;
+.install-btn{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    background: linear-gradient(45deg,#00c6ff,#0072ff);
+    color:white;
+    transition:0.3s;
 }
 
-button {
-  padding: 10px 20px;
-  margin-top: 10px;
-  background: #ff9800;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s;
+.install-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 5px 20px rgba(0,114,255,0.5);
 }
 
-button:hover {
-  background: #e68900;
+.features{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-input {
-  display: block;
-  margin: 10px 0;
-  padding: 8px;
-  width: 250px;
-  border-radius: 5px;
-  border: none;
+.card{
+    flex:1;
+    min-width:250px;
+    background: rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    transition:0.3s;
 }
 
-.flowchart div {
-  margin: 5px 0;
-  background: rgba(255,255,255,0.2);
-  padding: 8px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.roadmap li {
-  margin: 10px 0;
-  background: rgba(0,0,0,0.3);
-  padding: 8px;
-  border-radius: 5px;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
+.card:hover{
+    background: rgba(255,255,255,0.2);
+    transform:translateY(-5px);
 }
