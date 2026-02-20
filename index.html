@@ -2,31 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Guava Health - Smart Tracker</title>
+    <title>HealthSync - Wellness Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <div class="header">
-            <div class="app-icon">G</div>
-            <div class="title-section">
-                <h1>Guava Health Tracker</h1>
-                <p>Manage meds, symptoms & medical records easily</p>
-                <div class="rating">⭐ 4.5 • 1K Reviews • Rated 3+</div>
-                <button class="install-btn" onclick="installApp()">Install</button>
+    <nav>
+        <h2 class="logo">HealthSync</h2>
+        <button class="nav-btn">Download</button>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-left">
+            <div class="app-badge">HS</div>
+            <h1>Your Personal Wellness Companion</h1>
+            <p>Track your health data, manage prescriptions, and stay in control of your well-being.</p>
+            
+            <div class="app-info">
+                <span>⭐ 4.6 Rating</span>
+                <span>10K+ Users</span>
+                <span>Safe & Secure</span>
             </div>
+
+            <button class="install-btn" onclick="installApp()">Install App</button>
         </div>
 
-        <div class="features">
-            <div class="card">
-                <h3>Track Health</h3>
-                <p>Monitor blood pressure, sugar & more in one place.</p>
-            </div>
-            <div class="card">
-                <h3>All Records</h3>
-                <p>Store prescriptions and medical reports securely.</p>
-            </div>
-            <div class="card">
-                <h3>Daily Insights</h3>
-                <p>Get smart suggestions for better wellness.</p>
+        <div class="hero-right">
+            <div class="preview-card">📊 Health Dashboard</div>
+            <div class="preview-card">💊 Medicine Manager</div>
+            <div class="preview-card">📁 Reports Storage</div>
+        </div>
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>
