@@ -1,67 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>HealthMate Pro</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8">
+  <title>HealthFit Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-<!-- START SCREEN -->
-<div id="startScreen" class="center-screen">
-    <h1>💪 HealthMate Pro</h1>
-    <button onclick="showLogin()">Start</button>
+<!-- Sidebar -->
+<div class="sidebar">
+  <h2>HealthFit</h2>
+  <ul>
+    <li onclick="showSlide('home')">🏠 Main Menu</li>
+    <li onclick="showSlide('profile')">👤 Profile</li>
+    <li onclick="showSlide('health')">💪 Health Data</li>
+    <li onclick="showSlide('roadmap')">🗺 Roadmap</li>
+    <li onclick="showSlide('settings')">⚙ Settings</li>
+  </ul>
 </div>
 
-<!-- LOGIN SCREEN -->
-<div id="loginScreen" class="center-screen hidden">
-    <h2>Login</h2>
-    <input type="text" id="name" placeholder="Your Name">
-    <input type="email" id="email" placeholder="Your Email">
-    <button onclick="login()">Login</button>
-</div>
+<!-- Content Area -->
+<div class="content">
 
-<!-- PROFILE DASHBOARD -->
-<div id="profileScreen" class="hidden">
-    <h2 id="welcomeText"></h2>
-    <button onclick="showForm()">Enter Health Data</button>
-</div>
+  <!-- HOME -->
+  <section id="home" class="slide active">
+    <h1>Welcome to HealthFit Pro</h1>
+    <p class="slogan">"Track Today, Transform Tomorrow"</p>
+    <p class="slogan">"Your Health, Your Power"</p>
+    <p class="slogan">"Small Steps, Big Results"</p>
+    <button onclick="showSlide('login')">Start</button>
+  </section>
 
-<!-- HEALTH FORM -->
-<div id="formScreen" class="hidden container">
-    <div class="card">
-        <h3>Enter Your Health Data</h3>
-        <input type="number" id="steps" placeholder="Steps">
-        <input type="number" id="height" placeholder="Height (cm)">
-        <input type="number" id="weight" placeholder="Weight (kg)">
-        <input type="number" id="water" placeholder="Water Intake (glasses)">
-        <input type="number" id="calories" placeholder="Calories Burned">
-        <input type="number" id="workout" placeholder="Workout Duration (min)">
-        <input type="number" id="sleep" placeholder="Sleep Hours">
-        <button onclick="generateReport()">Generate Report</button>
-    </div>
-</div>
+  <!-- LOGIN -->
+  <section id="login" class="slide">
+    <h2>Login with Google</h2>
+    <button class="google-btn">Sign in with Google</button>
+  </section>
 
-<!-- REPORT SECTION -->
-<div id="reportScreen" class="hidden container">
-    <div class="card">
-        <h3>Health Flowchart</h3>
-        <canvas id="healthChart"></canvas>
-    </div>
-
-    <div class="card">
-        <h3>Health Report</h3>
-        <p id="writtenReport"></p>
-    </div>
-
-    <div class="card">
-        <h3>Roadmap Recommendation</h3>
-        <p id="roadmap"></p>
-    </div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
+  <!-- PROFILE -->
+  <section id="profile" class="slide">
+    <h2>Create Profile</h2>
+    <input type="text" id="name" placeholder="Name">
+    <input type="number" id="age" placeholder="Age">
+    <input type="date" id="dob">
