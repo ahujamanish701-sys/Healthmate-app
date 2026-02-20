@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HealthMate Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hero">
+    <h1>💪 HealthMate Pro</h1>
+    <p>Track Your Fitness. Transform Your Life.</p>
+</div>
+
+<div class="container">
+
+    <!-- Steps -->
+    <div class="card">
+        <h3>👣 Daily Steps</h3>
+        <input type="number" id="steps" placeholder="Enter steps">
+        <button onclick="saveSteps()">Save</button>
+        <p id="stepsResult"></p>
+    </div>
+
+    <!-- Water -->
+    <div class="card">
+        <h3>💧 Water Intake</h3>
+        <input type="number" id="water" placeholder="Glasses per day">
+        <button onclick="saveWater()">Save</button>
+        <p id="waterResult"></p>
+    </div>
+
+    <!-- Medicine -->
+    <div class="card">
+        <h3>💊 Medicine Reminder</h3>
+        <input type="text" id="medicine" placeholder="Medicine name">
+        <button onclick="saveMedicine()">Set Reminder</button>
+        <p id="medicineResult"></p>
+    </div>
+
+    <!-- BMI -->
+    <div class="card">
+        <h3>📊 BMI Calculator</h3>
+        <input type="number" id="weight" placeholder="Weight (kg)">
+        <input type="number" id="height" placeholder="Height (cm)">
+        <button onclick="calculateBMI()">Calculate</button>
+        <p id="bmiResult"></p>
+    </div>
+
+    <!-- Calories -->
+    <div class="card">
+        <h3>🔥 Calorie Calculator</h3>
+        <input type="number" id="age" placeholder="Age">
+        <input type="number" id="calWeight" placeholder="Weight (kg)">
+        <input type="number" id="calHeight" placeholder="Height (cm)">
+        <button onclick="calculateCalories()">Calculate</button>
+        <p id="calorieResult"></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
