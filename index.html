@@ -44,3 +44,55 @@
     <input type="text" id="name" placeholder="Name">
     <input type="number" id="age" placeholder="Age">
     <input type="date" id="dob">
+    <input type="file" id="photo">
+    <button onclick="saveProfile()">Save Profile</button>
+    <div id="profileDisplay"></div>
+  </section>
+
+  <!-- HEALTH DATA -->
+  <section id="health" class="slide">
+    <h2>Health Tracker</h2>
+    <input type="number" id="steps" placeholder="Steps">
+    <input type="number" id="height" placeholder="Height (cm)">
+    <input type="number" id="weight" placeholder="Weight (kg)">
+    <input type="number" id="water" placeholder="Water Intake (L)">
+    <input type="number" id="calories" placeholder="Calories">
+    <input type="number" id="workout" placeholder="Workout Duration (min)">
+    <input type="text" id="sleep" placeholder="Sleep Schedule (e.g 7h)">
+    <button onclick="calculateBMI()">Calculate BMI</button>
+    <h3 id="bmiResult"></h3>
+
+    <!-- Flowchart -->
+    <div class="flowchart">
+      <div>Steps</div>
+      <div>↓</div>
+      <div>Workout</div>
+      <div>↓</div>
+      <div>Calories Burn</div>
+      <div>↓</div>
+      <div>Healthy Body</div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="slide">
+    <h2>Your Health Roadmap</h2>
+    <ul class="roadmap">
+      <li>Step 1: Set Profile</li>
+      <li>Step 2: Track Daily Steps</li>
+      <li>Step 3: Maintain Diet & Water</li>
+      <li>Step 4: Workout Regularly</li>
+      <li>Step 5: Sleep 7-8 Hours</li>
+    </ul>
+  </section>
+
+  <!-- SETTINGS -->
+  <section id="settings" class="slide">
+    <h2>Settings</h2>
+    <p>Dark Mode Toggle (Coming Soon)</p>
+  </section>
+
+</div>
+
+</body>
+</html>
